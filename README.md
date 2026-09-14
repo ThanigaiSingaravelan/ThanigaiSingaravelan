@@ -1,29 +1,21 @@
-```
-╭──────────────────────────────────────────────────────────────────╮
-│                                                                  │
-│   THANIGAI SINGARAVELAN SENTHIL KUMAR                            │
-│   AI Researcher — LLM systems, retrieval, inference performance  │
-│                                                                  │
-╰──────────────────────────────────────────────────────────────────╯
-```
-
-AI Researcher at **Thanwise Ltd**. I build retrieval and inference systems around large language models, and spend most of my time finding out why they are slower than they should be.
-
-```console
-$ whoami --verbose
-degree   MSc Artificial Intelligence          Distinction · avg 76
-thesis   LLAMAREC                             85 / 100
-models   Llama 3 8B · 70B · 3.1 8B            local, via Ollama
-prior    TCS — supply chain ML                ~15% cost reduction
-stack    Python · C++ · PyTorch · CUDA
-located  United Kingdom
+```yaml
+name:      Thanigai Singaravelan Senthil Kumar
+role:      AI Researcher @ Thanwise Ltd
+focus:     [ LLM inference, retrieval architecture, GPU performance ]
+degree:    MSc Artificial Intelligence — Distinction
+models:    Llama 3 8B / 70B / 3.1 8B — local, via Ollama
+stack:     [ Python, C++, PyTorch, CUDA ]
+location:  United Kingdom
+open_to:   research roles, collaborations, good questions
 ```
 
-**[Email](mailto:thanigaisinga@gmail.com)** &nbsp;&nbsp; **[LinkedIn](https://www.linkedin.com/in/than-tsv/)** &nbsp;&nbsp; **[Portfolio](https://ThanigaiSingaravelan.github.io)**
+I build retrieval and inference systems around large language models, and spend most of my time finding out why they are slower than they should be.
+
+📬 **[Email](mailto:thanigaisinga@gmail.com)** &nbsp; 💼 **[LinkedIn](https://www.linkedin.com/in/than-tsv/)** &nbsp; 🌐 **[Portfolio](https://ThanigaiSingaravelan.github.io)** &nbsp; 🐙 **[GitHub](https://github.com/ThanigaiSingaravelan)**
 
 <br />
 
-## What I work on
+## 🔬 What I work on
 
 Four threads, all pointing at the same question: how do you get a research result to run reliably on hardware someone can actually afford?
 
@@ -31,13 +23,13 @@ Four threads, all pointing at the same question: how do you get a research resul
 <tr>
 <td width="50%" valign="top">
 
-### Inference performance
+### ⚡ Inference performance
 Quantisation, mixed precision, batch scheduling and memory footprint. Profiling first, changing code second.
 
 </td>
 <td width="50%" valign="top">
 
-### Retrieval architecture
+### 🧭 Retrieval architecture
 Chunking strategy, embedding pipelines and evaluation harnesses that catch regressions before users do.
 
 </td>
@@ -45,13 +37,13 @@ Chunking strategy, embedding pipelines and evaluation harnesses that catch regre
 <tr>
 <td valign="top">
 
-### Fine-tuning
+### 🎛️ Fine-tuning
 LoRA adapters on HuggingFace Transformers, where adapting a smaller model beats reaching for a larger one.
 
 </td>
 <td valign="top">
 
-### GPU kernels
+### 🟩 GPU kernels
 CUDA C/C++ and Triton. Currently self-directed study, moving into the projects where it earns its place.
 
 </td>
@@ -60,41 +52,40 @@ CUDA C/C++ and Triton. Currently self-directed study, moving into the projects w
 
 <br />
 
-## LLAMAREC &nbsp;·&nbsp; `85/100`
+## 🧪 LLAMAREC
 
 **[Cross-domain recommendation running entirely on local Llama 3](https://github.com/ThanigaiSingaravelan/llamrec)** — MSc dissertation, awarded Distinction.
 
 Cross-domain recommendation usually means sending a user's entire history to a third-party API. LLAMAREC keeps every inference call on the machine: the same recommendation quality without the privacy cost, and the model explains its own ranking as it produces it.
 
-| System | Implementation |
-|:--|:--|
-| **Serving** | Ollama, fully local — Llama 3 8B and 70B, plus 3.1 8B |
-| **Retrieval** | RAG over multi-domain user histories: books, film, television, music |
-| **Prompting** | Three strategies compared head-to-head — standard, few-shot, chain-of-thought |
-| **Data** | Amazon review corpus through a vectorised NumPy/Pandas pipeline into batched embeddings |
-| **Evaluation** | Reproducible harness covering both cold-start and warm-start user segments |
+```ini
+[serving]      Ollama, fully local — Llama 3 8B and 70B, plus 3.1 8B
+[retrieval]    RAG over multi-domain histories: books, film, TV, music
+[prompting]    standard · few-shot · chain-of-thought, compared head-to-head
+[data]         Amazon reviews → vectorised NumPy/Pandas → batched embeddings
+[evaluation]   reproducible harness for cold-start and warm-start segments
+```
 
 > ### At 70B, the bottleneck was never compute.
 >
 > Profiling across GPU and mixed CPU/GPU configurations, the model went memory-bound long before it saturated the arithmetic units. Most of the useful tuning turned out to be memory layout and batching — not the things I expected to be touching.
 
-```
-where the time actually went, Llama 3 70B, local
-
-memory / bandwidth   ████████████████████████████████░░░░░░░░   saturated
-compute              ██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░   headroom left
+```diff
+  where the time actually went — Llama 3 70B, local
+- memory / bandwidth    saturated, and this was the real ceiling
++ compute               headroom left over, never the constraint
 ```
 
 <details>
-<summary><b>Three other things that fell out of it</b></summary>
+<summary>🔎 <b>Three other things that fell out of it</b></summary>
 
 <br />
 
-**Trade surface.** Mapped the relationship between parameter count, quantisation level and prompt strategy across consumer and workstation cards.
+🗺️ &nbsp;**Trade surface.** Mapped the relationship between parameter count, quantisation level and prompt strategy across consumer and workstation cards.
 
-**Prompting isn't independent of size.** Chain-of-thought recovers a real slice of what the smaller models give up, which changes the deployment maths entirely.
+🔗 &nbsp;**Prompting isn't independent of size.** Chain-of-thought recovers a real slice of what the smaller models give up, which changes the deployment maths entirely.
 
-**Cold-start is the payoff.** No interaction history to collaborative-filter over, but plenty of semantic signal left to reason from.
+❄️ &nbsp;**Cold-start is the payoff.** No interaction history to collaborative-filter over, but plenty of semantic signal left to reason from.
 
 </details>
 
@@ -104,14 +95,14 @@ compute              ██████████████░░░░░�
 
 <br />
 
-## Experience
+## 💼 Experience
 
 Research now, production before it — which is mostly why I care about the gap between the two.
 
 <table>
 <tr><td width="170" valign="top"><br /><code>Jul 2025 —<br />present</code></td><td valign="top">
 
-### AI Researcher
+### 🟢 AI Researcher
 Thanwise Ltd, United Kingdom
 
 - Prototype and benchmark generative and multimodal approaches in Python and PyTorch against published baselines.
@@ -122,7 +113,7 @@ Thanwise Ltd, United Kingdom
 </td></tr>
 <tr><td valign="top"><br /><code>Jul 2022 —<br />Dec 2023</code></td><td valign="top">
 
-### Assistant Systems Engineer
+### 🔵 Assistant Systems Engineer
 Tata Consultancy Services, India
 
 - Built ML algorithms in Python and PyTorch for supply-chain forecasting and inventory planning at Diageo and Pando, contributing a **~15% cost reduction** on the targeted workflows.
@@ -133,7 +124,7 @@ Tata Consultancy Services, India
 </td></tr>
 <tr><td valign="top"><br /><code>Jan 2022 —<br />Jun 2022</code></td><td valign="top">
 
-### Systems Design Engineer
+### 🟣 Systems Design Engineer
 Success Point Overseas Education Consultancy, India
 
 - Built automated data-processing systems for customer analytics, applying algorithmic optimisation that improved key brand metrics by **~20%**.
@@ -144,40 +135,38 @@ Success Point Overseas Education Consultancy, India
 
 <br />
 
-## Stack
+## 🧰 Stack
 
 Tools I reach for without looking them up.
 
-| | |
-|:--|:--|
-| **Languages** | Python, C++, C, Java, SQL, PL/SQL |
-| **Deep learning** | PyTorch (CUDA backend), HuggingFace Transformers, LoRA fine-tuning, scikit-learn, NumPy, Pandas, Ollama |
-| **GPU & parallel** | Multi-GPU LLM inference, model and data parallelism, mixed-precision training, quantisation, performance profiling, memory optimisation |
-| **Systems** | Algorithm design and analysis, graph algorithms, distributed systems, real-time systems, sensor fusion, SLAM, 3D reconstruction |
-| **Platforms** | Linux, Git, Docker, Microsoft Azure (AZ-104), ROS, Agile and Scrum |
+```yaml
+languages:      Python · C++ · C · Java · SQL · PL/SQL
+deep_learning:  PyTorch (CUDA backend) · HuggingFace Transformers · LoRA
+                scikit-learn · NumPy · Pandas · Ollama
+gpu_parallel:   multi-GPU inference · model and data parallelism
+                mixed-precision training · quantisation · profiling
+systems:        algorithm design · graph algorithms · distributed systems
+                real-time systems · sensor fusion · SLAM · 3D reconstruction
+platforms:      Linux · Git · Docker · Azure AZ-104 · ROS · Agile
+```
 
 <br />
 
-## Education
+## 🎓 Education
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### MSc Artificial Intelligence and Mobile Robots
+### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 MSc Artificial Intelligence and Mobile Robots
 De Montfort University, Leicester — **Distinction**
 
-```
-Project / dissertation      85
-Neural Systems & NLP        78
-Research Methods            77
-Classification average      76
-```
+Neural systems and NLP, deep learning, computer vision, mobile robotics, research methods. Dissertation on LLM-based recommendation.
 
 </td>
 <td width="50%" valign="top">
 
-### BTech Information Technology
+### 🇮🇳 BTech Information Technology
 Anna University, India — **First Class with Distinction**
 
 Four years of fundamentals: data structures, algorithms, databases and systems programming, which is still the part I lean on most.
@@ -187,22 +176,29 @@ Four years of fundamentals: data structures, algorithms, databases and systems p
 </table>
 
 <details>
-<summary><b>Certifications</b></summary>
+<summary>📜 <b>Certifications</b></summary>
 
 <br />
 
-Generative AI (Professional) · IBM Artificial Intelligence · Microsoft Azure Administrator AZ-104 · Deep Learning & Machine Learning (NPTEL) · Computer Vision and Image Processing · Robot Operating System (ROS) · Agile Scrum & Kanban
+```ini
+[ai]          Generative AI (Professional) · IBM Artificial Intelligence
+[ml]          Deep Learning & Machine Learning (NPTEL)
+[vision]      Computer Vision and Image Processing
+[cloud]       Microsoft Azure Administrator AZ-104
+[robotics]    Robot Operating System (ROS)
+[delivery]    Agile Scrum & Kanban
+```
 
 </details>
 
 <br />
 
-## Tell me what's running slowly.
+## 📬 Tell me what's running slowly.
 
-I'm happy to talk about inference optimisation, retrieval design, or anything sitting between AI research and systems engineering. Roles, collaborations and good questions all welcome.
+I'm happy to talk about inference optimisation, retrieval design, or anything sitting between AI research and systems engineering.
 
-```
-→  thanigaisinga@gmail.com
-→  linkedin.com/in/than-tsv
-→  github.com/ThanigaiSingaravelan
+```diff
++ thanigaisinga@gmail.com
++ linkedin.com/in/than-tsv
++ github.com/ThanigaiSingaravelan
 ```
