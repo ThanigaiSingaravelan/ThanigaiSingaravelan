@@ -15,6 +15,7 @@
 Forward Deployed Engineer | AI engineer. I build LLM systems end to end and put them into real business workflows.
 
 - 🎓 MSc in Artificial Intelligence (Distinction), De Montfort University
+- 🎓 B Tech in Information Technology (IT)
 - 💼 Tata Consultancy Services building forecasting models for supply-chain clients
 - 🔧 Right now: building agents, MCP tools and evaluation for ThanSence
 
