@@ -12,10 +12,10 @@
 
 ### About me
 
-AI engineer based in the UK. I build LLM systems end to end and put them into real business workflows.
+AI engineer. I build LLM systems end to end and put them into real business workflows.
 
 - 🎓 MSc in Artificial Intelligence (Distinction), De Montfort University
-- 💼 18 months at Tata Consultancy Services building forecasting models for supply-chain clients
+- 💼 Tata Consultancy Services building forecasting models for supply-chain clients
 - 🔧 Right now: building agents, MCP tools and evaluation for ThanSence
 
 ---
