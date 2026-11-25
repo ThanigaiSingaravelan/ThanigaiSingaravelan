@@ -12,7 +12,7 @@
 
 ### About me
 
-AI engineer. I build LLM systems end to end and put them into real business workflows.
+Forward Deployed Engineer | AI engineer. I build LLM systems end to end and put them into real business workflows.
 
 - 🎓 MSc in Artificial Intelligence (Distinction), De Montfort University
 - 💼 Tata Consultancy Services building forecasting models for supply-chain clients
