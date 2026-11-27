@@ -4,7 +4,7 @@
 
 <a href="https://linkedin.com/in/than-tsv"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="mailto:thanigaisinga@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-<img src="https://img.shields.io/badge/Based_in-UK-1F3864?style=for-the-badge" alt="Based in the UK" />
+<img src="https://img.shields.io/badge/Based_in-UK-1F3864?style=for-the-badge" alt="Based in the UK and India" />
 
 </div>
 
@@ -16,7 +16,7 @@ Forward Deployed Engineer | AI engineer. I build LLM systems end to end and put 
 
 - 🎓 MSc in Artificial Intelligence (Distinction), De Montfort University
 - 🎓 B Tech in Information Technology (IT)
-- 💼 Tata Consultancy Services building forecasting models for supply-chain clients
+- 💼 Tata Consultancy Services building forecasting models for supply-chain clients with ML and CI/CD
 - 🔧 Right now: building agents, MCP tools and evaluation for ThanSence
 
 ---
